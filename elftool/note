@@ -1,0 +1,10 @@
+
+elftool有給一些有用的function
+
+記得編譯的時候要加-lelf
+
+Q:怎麼拿到entry point?
+elfobject->entrypoint
+
+
+

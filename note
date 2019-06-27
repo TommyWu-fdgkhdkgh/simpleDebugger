@@ -1,0 +1,64 @@
+- break {instruction-address}: add a break point
+O- cont: continue execution 
+- delete {break-point-id}: remove a break point
+O- disasm addr: disassemble instructions in a file or a memory region
+O- dump addr [length]: dump memory content
+O- exit: terminate the debugger
+O- get reg: get a single value from a register
+O- getregs: show registers
+O- help: show this message
+- list: list break points
+O- load {path/to/a/program}: load a program
+O- run: run the program
+O- vmmap: show memory layout
+O- set reg val: get a single value to a register
+O- si: step into instruction
+O- start: start the program and stop at the first instruction
+- fix bug, code review
+
+
+break point:
+可以間把結構做好，然後測試delete & list
+
+
+共16個command
+
+get reg
+getregs
+set reg val
+
+break (便於驗證cont)
+list (便於驗證delete)
+delete
+cont 
+
+0. Makefile
+1. function : help
+2. example : a minimal example, hello world example
+3. example : instruction counter
+4. example : trace dump
+5. function : load
+6. function : run , 可以輸出child process的結果
+7. function : start
+8. function : vammp 
+9. function : get reg, get regs, set reg val (便於驗證si)
+10. si
+11. exit
+12. dump
+13. break, list, delete, cont, run after cont
+14. disassemble
+
+
+parse command 的方式可以參考看看osdi parse command的方式
+尤其是拿參數的方式 
+
+Q:編譯的-lelf是什麼意思？
+Q:為挺說的需要多做處理，是什麼意思？
+Q:用start，一開始執行的地方不是entry point??
+A:好像也挺正常的，到的地方跟gdb 用 starti到的地方很像
+
+
+Q:要怎麼知道child process已經結束了？
+
+
+Q:測試在PIE下能不能正常work
