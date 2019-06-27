@@ -22,3 +22,7 @@ my lab4
 - start: start the program and stop at the first instruction
 
 ## compile
+
+just "make" it!
+
+Should install "libelf", "capstone" first!
