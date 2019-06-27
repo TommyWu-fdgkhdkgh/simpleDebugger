@@ -1,6 +1,6 @@
 # hello!
 
-my lab4
+my lab4 in NCTU advanced unix programming
 
 ## features
 
